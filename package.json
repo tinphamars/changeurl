@@ -1,8 +1,9 @@
 {
-	"name": "my-app",
+	"name": "client",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": ".",
+	"homepage": "http://tyn-ars.herokuapp.com/",
+	"main": "server.js",
 	"engines": {
 		"node": "12.x",
 		"npm": "6.4.1",
