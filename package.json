@@ -20,7 +20,7 @@
 		"dev-server": "webpack-dev-server --open",
 		"start": "node server.js",
 		"build": "webpack -p",
-		"heroku-postbuild": "npm run build"
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
