@@ -1,10 +1,16 @@
 const express = require('express')
-const app = express()
 const path = require('path')
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8080
+const app = express()
 
-app.use('/', express.static(path.join(__dirname, '/public')))
+// serve static assets normally
+app.use(express.static(__dirname + '/public'))
 
-app.listen(port, () => console.log("Listening on Port", port)) 
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function (request, response) {
+    response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
 
-// exports.app = functions.https.onRequest(app)
+app.listen(port)
+console.log("server started on port " + port)
