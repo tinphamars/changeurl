@@ -5,9 +5,8 @@
 	"homepage": "https://tyn-ars.herokuapp.com/",
 	"main": "index.js",
 	"engines": {
-		"node": "12.x",
-		"npm": "6.14.6",
-		"yarn": "1.19.1"
+		"node": "10.16.1",
+		"npm": "6.14.7"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
@@ -18,10 +17,10 @@
 		"react-scripts": "3.4.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
+		"dev-server": "webpack-dev-server --open",
+		"start": "node server.js",
+		"build": "webpack -p",
+		"heroku-postbuild": "npm run build"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
