@@ -21,7 +21,7 @@
 		"dev-server": "webpack-dev-server --open",
 		"start": "node server.js",
 		"build": "webpack -p",
-		"heroku-postbuild": "npm install && npm run build"
+		"heroku-postbuild": "yarn install && yarn run build"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
