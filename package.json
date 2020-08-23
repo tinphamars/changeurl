@@ -2,9 +2,9 @@
 	"name": "tyn-ars",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://tyn-ars.herokuapp.com/",
+	"homepage": ".",
 	"engines": {
-		"node": "10.16.1",
+		"node": "14.5.0",
 		"npm": "6.14.7"
 	},
 	"dependencies": {
